@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Uthr</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- 🟢 PRODUCT HOVER CSS -->
+    <style>
+        .product-card {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .product-card img {
+            transition: 0.4s;
+        }
+        
+        .product-card:hover img {
+            opacity: 0.3;
+        }
+        
+        .product-hover {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: 0.4s;
+        }
+        
+        .product-card:hover .product-hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 🟢 TOP CONTACT BAR -->
+    <div class="bg-success text-white py-1">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center small">
+            <div class="d-flex gap-3">
+                <span><i class="bi bi-telephone"></i> +054 8371 65 66</span>
+                <span><i class="bi bi-envelope"></i> uthrstore@domain.com</span>
+            </div>
+
+            <div class="text-center">Free shipping worldwide for orders over $99</div>
+
+            <div class="d-flex align-items-center gap-2">
+                Follow us:
+                <i class="bi bi-twitter"></i>
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-youtube"></i>
+                <i class="bi bi-pinterest"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🟢 MAIN NAV BAR -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+
+            <a class="navbar-brand" href="https://rundemo.hasthemes.com/uthr/">
+                <img src="images/logo.png" height="40" alt="logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav text-uppercase fw-semibold">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://rundemo.hasthemes.com/uthr/">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://rundemo.hasthemes.com/uthr/shop.html">Shop</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://rundemo.hasthemes.com/uthr/product-details.html">Product</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://rundemo.hasthemes.com/uthr/shop.html">Sale</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://rundemo.hasthemes.com/uthr/cart.html">Buy</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="d-flex align-items-center gap-3">
+                <i class="bi bi-search fs-5"></i>
+                <i class="bi bi-person fs-5"></i>
+
+                <div class="position-relative">
+                    <i class="bi bi-heart fs-5"></i>
+                    <span class="badge bg-dark position-absolute top-0 start-100 translate-middle">2</span>
+                </div>
+
+                <div class="position-relative">
+                    <i class="bi bi-bag fs-5"></i>
+                    <span class="badge bg-dark position-absolute top-0 start-100 translate-middle">2</span>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+
+
+    <!-- 🟢 RESPONSIVE CAROUSEL -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner">
+
+            <div class="carousel-item active position-relative">
+                <img src="images/slider1.jpg" class="d-block w-100" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-25"></div>
+
+                <div class="carousel-caption">
+                    <h3 class="fw-bold">Explore New Fashion</h3>
+                    <p>Discover the latest trends and elevate your style.</p>
+                    <a href="#" class="btn btn-success">Shop Now</a>
+                </div>
+            </div>
+
+            <div class="carousel-item position-relative">
+                <img src="images/slider1.jpg" class="d-block w-100" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-25"></div>
+
+                <div class="carousel-caption">
+                    <h3 class="fw-bold">Best Deals This Season</h3>
+                    <p>Grab amazing discounts on selected products.</p>
+                    <a href="#" class="btn btn-success">View Offers</a>
+                </div>
+            </div>
+
+            <div class="carousel-item position-relative">
+                <img src="images/slider1.jpg" class="d-block w-100" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-25"></div>
+
+                <div class="carousel-caption">
+                    <h3 class="fw-bold">Upgrade Your Wardrobe</h3>
+                    <p>Premium quality clothing for every occasion.</p>
+                    <a href="#" class="btn btn-success">Browse Collection</a>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- 🟢 FEATURE ICONS -->
+    <div class="container py-5">
+        <div class="row text-center gy-4">
+            <div class="col-6 col-md-3">
+                <i class="bi bi-send fs-1"></i>
+                <h6 class="fw-bold mt-2">Free Shipping</h6>
+                <small class="text-muted">Orders over $100</small>
+            </div>
+            <div class="col-6 col-md-3">
+                <i class="bi bi-arrow-repeat fs-1"></i>
+                <h6 class="fw-bold mt-2">Free Returns</h6>
+                <small class="text-muted">Within 30 days</small>
+            </div>
+            <div class="col-6 col-md-3">
+                <i class="bi bi-shield-lock fs-1"></i>
+                <h6 class="fw-bold mt-2">100% Secure Payment</h6>
+                <small class="text-muted">Payment Online</small>
+            </div>
+            <div class="col-6 col-md-3">
+                <i class="bi bi-tags fs-1"></i>
+                <h6 class="fw-bold mt-2">Affordable Price</h6>
+                <small class="text-muted">Guaranteed</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🟢 FEATURED COLLECTIONS -->
+    <div class="container pb-5">
+        <h3 class="fw-bold text-success mb-4">FEATURED COLLECTIONS</h3>
+
+        <div class="row g-4">
+            <!-- Left: Backpacks -->
+            <div class="col-md-6">
+                <div class="position-relative">
+                    <img src="images/bg1.jpg" class="img-fluid w-100" alt="">
+                    <div class="position-absolute top-0 start-0 p-4 text-dark">
+                        <h3 class="fw-bold">ZARA PATTERN<br>BACKPACKS</h3>
+                        <p>Stretch,fresh-cool help you alway comfortable</p>
+                        <a href="#" class="btn btn-success">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Caps -->
+            <div class="col-md-6">
+                <div class="position-relative bg-secondary">
+                    <img src="images/bg2.jpg" class="img-fluid w-100 opacity-75" alt="">
+                    <div class="position-absolute top-0 start-0 p-4 text-white">
+                        <h3 class="fw-bold">BASIC COLOR CAPS</h3>
+                        <p>Minimalist never cool, choose and make the simple great again!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🟢 BEST SELLING ITEMS (UPGRADED HOVER VERSION) -->
+    <div class="container py-5">
+
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h3 class="fw-bold text-success">BEST SELLING ITEMS</h3>
+            <div class="d-flex gap-4 fw-semibold">
+                <a href="#" class="text-dark text-decoration-none">All</a>
+                <a href="#" class="text-dark text-decoration-none">Clothings</a>
+                <a href="#" class="text-dark text-decoration-none">Bags</a>
+                <a href="#" class="text-dark text-decoration-none">Shoes</a>
+                <a href="#" class="text-dark text-decoration-none">Accessories</a>
+                <a href="#" class="text-dark text-decoration-none">All Products</a>
+            </div>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Product 1 -->
+            <div class="col-6 col-md-3">
+                <div class="card border-0 text-center product-card">
+                    <img src="images/product0.jpg" class="card-img-top" alt="">
+                    <div class="product-hover">
+                        <button class="btn btn-success px-3">Add To Cart</button>
+                    </div>
+                    <div class="card-body">
+                        <div class="text-warning small mb-1">★★★★★ <span class="text-dark">(4)</span></div>
+                        <h6 class="fw-semibold">Basic Joggin Shorts</h6>
+                        <p class="mb-0 text-danger fw-bold">$26.00
+                            <span class="text-muted text-decoration-line-through">$62.00</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-6 col-md-3">
+                <div class="card border-0 text-center product-card">
+                    <span class="badge bg-danger position-absolute m-2">-20%</span>
+                    <img src="images/product2.jpg" class="card-img-top" alt="">
+                    <div class="product-hover">
+                        <button class="btn btn-success px-3">Add To Cart</button>
+                    </div>
+                    <div class="card-body">
+                        <div class="text-warning small mb-1">★★★★★ <span class="text-dark">(6)</span></div>
+                        <h6 class="fw-semibold">Make Things Happen T-Shirts</h6>
+                        <p class="mb-0 fw-bold">$38.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-6 col-md-3">
+                <div class="card border-0 text-center product-card">
+                    <span class="badge bg-danger position-absolute m-2">-18%</span>
+                    <img src="images/product3.jpg" class="card-img-top" alt="">
+                    <div class="product-hover">
+                        <button class="btn btn-success px-3">Add To Cart</button>
+                    </div>
+                    <div class="card-body">
+                        <div class="text-warning small mb-1">★★★★★ <span class="text-dark">(2)</span></div>
+                        <h6 class="fw-semibold">Basic White Simple Sneaker</h6>
+                        <p class="mb-0 text-danger fw-bold">$43.00
+                            <span class="text-muted text-decoration-line-through">$46.00</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="col-6 col-md-3">
+                <div class="card border-0 text-center product-card">
+                    <img src="images/product4.jpg" class="card-img-top" alt="">
+                    <div class="product-hover">
+                        <button class="btn btn-success px-3">Add To Cart</button>
+                    </div>
+                    <div class="card-body">
+                        <div class="text-warning small mb-1">★★★★★ <span class="text-dark">(8)</span></div>
+                        <h6 class="fw-semibold">Simple Rounded Sunglasses</h6>
+                        <p class="mb-0 fw-bold">$42.00</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ====== NEW OFFERS SECTION (FULL COLUMN IMAGE = FULL BOX SIZE) ====== -->
+            <section class="container my-5">
+                <div class="row g-4">
+
+                    <!-- Left Offer Card -->
+                    <div class="col-12 col-md-6">
+                        <div class="row g-0 bg-light" style="min-height: 330px;">
+
+                            <!-- Text -->
+                            <div class="col-6 p-4 d-flex flex-column justify-content-center">
+                                <p class="text-muted mb-1">NEW ARRIVALS</p>
+                                <p class="text-muted">WOMEN</p>
+                                <h2 class="fw-bold">MINIMALIST<br>SNEAKER</h2>
+                                <p class="text-muted mb-3">Stretch, fresh-cool help you always feel comfortable</p>
+                                <a href="#" class="btn btn-success px-4">SHOP NOW</a>
+                            </div>
+
+                            <!-- Image FULL BOX SIZE -->
+                            <div class="col-6">
+                                <img src="images/bg3.jpg" class="w-100 h-100" style="object-fit: cover;">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Right Offer Card -->
+                    <div class="col-12 col-md-6">
+                        <div class="row g-0 bg-light" style="min-height: 330px;">
+
+                            <!-- Text -->
+                            <div class="col-6 p-4 d-flex flex-column justify-content-center">
+                                <p class="text-muted mb-1">MEGA SALE</p>
+                                <h1 class="fw-bold"><span style="color:red;">50% OFF</span><br>FOR AUTUMN</h1>
+                                <p class="text-muted mb-3">Stretch, fresh-cool help you always feel comfortable</p>
+                                <a href="#" class="btn btn-success px-4">SHOP NOW</a>
+                            </div>
+
+                            <!-- Image FULL BOX SIZE -->
+                            <div class="col-6">
+                                <img src="images/bg4.jpg" class="w-100 h-100" style="object-fit: cover;">
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- ====== END NEW OFFERS SECTION ====== -->
+
+            <!-- 🟢 NEW ARRIVALS SECTION -->
+            <section class="container my-5">
+
+                <h3 class="fw-bold text-success mb-4">NEW ARRIVALS</h3>
+
+                <div class="d-flex gap-4 fw-semibold mb-3">
+                    <a href="#" class="text-dark text-decoration-none">All</a>
+                    <a href="#" class="text-dark text-decoration-none">Clothings</a>
+                    <a href="#" class="text-dark text-decoration-none">Bags</a>
+                    <a href="#" class="text-dark text-decoration-none">Shoes</a>
+                    <a href="#" class="text-dark text-decoration-none">Accessories</a>
+                    <a href="#" class="text-dark text-decoration-none">ALL PRODUCT</a>
+                </div>
+
+                <div class="row g-4">
+
+                    <!-- Product 1 -->
+                    <div class="col-6 col-md-3">
+                        <div class="card border-0 text-center product-card">
+                            <span class="badge bg-danger position-absolute m-2">-18%</span>
+                            <img src="images/product3.jpg" class="card-img-top w-100" style="height:350px; object-fit:cover;">
+                            <div class="product-hover">
+                                <button class="btn btn-success px-3">Add To Cart</button>
+                            </div>
+                            <div class="card-body">
+                                <div class="text-warning small mb-1">★★★★★ <span class="text-dark">(2)</span></div>
+                                <h6 class="fw-semibold">Basic White Simple Sneaker</h6>
+                                <p class="mb-0 text-danger fw-bold">$43.00
+                                    <span class="text-muted text-decoration-line-through">$46.00</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="col-6 col-md-3">
+                        <div class="card border-0 text-center product-card">
+                            <img src="images/product4.jpg" class="card-img-top w-100" style="height:350px; object-fit:cover;">
+                            <div class="product-hover">
+                                <button class="btn btn-success px-3">Add To Cart</button>
+                            </div>
+                            <div class="card-body">
+                                <div class="text-warning small mb-1">★★★★★ <span class="text-dark">(8)</span></div>
+                                <h6 class="fw-semibold">Simple Rounded Sunglasses</h6>
+                                <p class="mb-0 fw-bold">$42.00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="col-6 col-md-3">
+                        <div class="card border-0 text-center product-card">
+                            <span class="badge bg-danger position-absolute m-2">-20%</span>
+                            <img src="images/product0.jpg" class="card-img-top w-100" style="height:350px; object-fit:cover;">
+                            <div class="product-hover">
+                                <button class="btn btn-success px-3">Add To Cart</button>
+                            </div>
+                            <div class="card-body">
+                                <div class="text-warning small mb-1">★★★★★ <span class="text-dark">(6)</span></div>
+                                <h6 class="fw-semibold">Make Things Happen T-Shirts</h6>
+                                <p class="mb-0 fw-bold">$38.00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="col-6 col-md-3">
+                        <div class="card border-0 text-center product-card">
+                            <img src="images/product2.jpg" class="card-img-top w-100" style="height:350px; object-fit:cover;">
+                            <div class="product-hover">
+                                <button class="btn btn-success px-3">Add To Cart</button>
+                            </div>
+                            <div class="card-body">
+                                <div class="text-warning small mb-1">★★★★★ <span class="text-dark">(4)</span></div>
+                                <h6 class="fw-semibold">Basic Joggin Shorts</h6>
+                                <p class="mb-0 text-danger fw-bold">$26.00
+                                    <span class="text-muted text-decoration-line-through">$62.00</span>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- 🟢 END NEW ARRIVALS SECTION -->
+
+
+
+        </div>
+        </section>
+        <!-- 🟢 PRESS & LOOK SECTION -->
+        <section class="container my-5">
+
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h3 class="fw-bold text-success">PRESS & LOOK</h3>
+                <a href="#" class="text-dark text-decoration-underline fw-semibold">ALL ARTICLES</a>
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Article 1 -->
+                <div class="col-md-4">
+                    <div class="card border-0">
+                        <img src="images/blog1.jpg" class="card-img-top w-100" style="height:250px; object-fit:cover;">
+                        <div class="card-body px-0">
+                            <small class="text-muted">News | May 25, 2020</small>
+                            <h5 class="fw-bold mt-2">
+                                Five things you only know if you’re at Chanel's Hamburg Show
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 2 -->
+                <div class="col-md-4">
+                    <div class="card border-0">
+                        <img src="images/blog2.jpg" class="card-img-top w-100" style="height:250px; object-fit:cover;">
+                        <div class="card-body px-0">
+                            <small class="text-muted">News | May 25, 2020</small>
+                            <h5 class="fw-bold mt-2">
+                                Basic colored mixed – trendind 2020
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 3 -->
+                <div class="col-md-4">
+                    <div class="card border-0">
+                        <img src="images/blog3.jpg" class="card-img-top w-100" style="height:250px; object-fit:cover;">
+                        <div class="card-body px-0">
+                            <small class="text-muted">News | May 25, 2020</small>
+                            <h5 class="fw-bold mt-2">
+                                Calvin Klein Shoes Collection 2020, Activities Summer
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- 🟢 KEEP CONNECTED SECTION -->
+                <section class="container my-5 pt-5">
+
+                    <h2 class="fw-bold">KEEP CONNECTED</h2>
+                    <p class="text-muted mb-4">Get updates by subscribe our weekly newsletter</p>
+
+                    <div class="row align-items-center">
+
+                        <!-- Email Field -->
+                        <div class="col-md-8">
+                            <div class="d-flex align-items-center border-bottom pb-2">
+                                <i class="bi bi-envelope fs-5 me-3"></i>
+                                <input type="email" class="form-control border-0 shadow-none" placeholder="Enter your email address">
+                            </div>
+                        </div>
+
+                        <!-- Subscribe Button -->
+                        <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                            <button class="btn text-dark fw-bold">SUBSCRIBE</button>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- 🟢 FOOTER SECTION -->
+                <footer class="container py-5">
+
+                    <div class="row">
+
+                        <!-- LEFT SIDE -->
+                        <div class="col-md-6 mb-4">
+
+                            <img src="images/logo.png" alt="logo" height="45" class="mb-4">
+
+                            <p class="text-muted small mb-1">Our Location</p>
+                            <p class="fw-semibold">869 General Village Apt. 645, Moorebury, USA</p>
+
+                            <p class="text-muted small mb-1 mt-4">24/7 hotline:</p>
+                            <p class="fw-semibold">(+99) 052 128 2399</p>
+
+                        </div>
+
+                        <!-- RIGHT SIDE -->
+                        <div class="col-md-6">
+
+                            <div class="d-flex gap-4 justify-content-md-end mb-4 fw-semibold">
+                                <a href="#" class="text-dark text-decoration-none">HOME</a>
+                                <a href="#" class="text-dark text-decoration-none">SHOP</a>
+                                <a href="#" class="text-dark text-decoration-none">PRODUCT</a>
+                                <a href="#" class="text-dark text-decoration-none">PAGES</a>
+                                <a href="#" class="text-dark text-decoration-none">BLOG</a>
+                            </div>
+
+                            <div class="d-flex gap-3 justify-content-md-end">
+
+                                <a class="border rounded-circle p-2 text-secondary" href="#"><i class="bi bi-twitter"></i></a>
+                                <a class="border rounded-circle p-2 text-secondary" href="#"><i class="bi bi-facebook"></i></a>
+                                <a class="border rounded-circle p-2 text-secondary" href="#"><i class="bi bi-google"></i></a>
+                                <a class="border rounded-circle p-2 text-secondary" href="#"><i class="bi bi-instagram"></i></a>
+                                <a class="border rounded-circle p-2 text-secondary" href="#"><i class="bi bi-youtube"></i></a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="text-center mt-5 text-muted">
+                        ©2020 <span class="fw-bold">Uthr</span>. Made With <span class="text-danger">❤</span> By HasThemes
+                    </div>
+
+                </footer>
+
+
+            </div>
+
+        </section>
+
+
+
+
+    </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
